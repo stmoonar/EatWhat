@@ -214,6 +214,11 @@ function showAppreciationCode() {
   } else {
     appreciationCode.style.display = "block";
     content.style.display = "none"; // 确保菜单关闭
+    // 跳转到赞赏码位置，不使用锚点是为了避免 URL 变化
+    window.scrollTo({
+      top: appreciationCode.offsetTop,
+      behavior: "smooth",
+    });
   }
 }
 
